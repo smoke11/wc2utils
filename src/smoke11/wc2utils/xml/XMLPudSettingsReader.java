@@ -1,11 +1,11 @@
-package smoke11.wc2utils.pudparser.xml;
+package smoke11.wc2utils.xml;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import smoke11.DebugView;
-import smoke11.wc2utils.pudparser.Tile;
+import smoke11.wc2utils.Tile;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
