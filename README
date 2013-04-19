@@ -1,1 +1,4 @@
-This file was created by IntelliJ IDEA 12.0.4 for binding GitHub repository
+Some useful classes from work on Warcraft 2.
+For now it`s mostly pud (map file) utilities
+
+I decided to separate it, becuase i`m starting to work on other Warcraft 2 related project.
