@@ -9,7 +9,7 @@ import java.io.*;
  * Time: 17:05
  * To change this template use File | Settings | File Templates.
  */
-public class PudParser {
+public class PudParser { //TODO: make comments about how pudparser working!
     //info data
     public String pudTitle, pudDesc, terrainType;
     public int dimX, dimY, numberofUnitsOnMap;
