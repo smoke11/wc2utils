@@ -1,6 +1,7 @@
 package smoke11.wc2utils;
 
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,7 +20,7 @@ public class PudParser { //TODO: make comments about how pudparser working!
     private byte[][][] mapDataTiles; //x,y,word
     private String[] unitTilesString; //indexes - number of unit, values separated by ';': x;y;unittype;owner;word-if gold mine or oil well, contains 2500 * this otherwise 0 passive 1 active
     public Tile[][] mapTiles;
-    public Tile[][] unitTiles;
+    public ArrayList<Tile>[][] unitTiles;
     public void getMapDataFromFile(File file)
     {
         FileInputStream fin;
@@ -197,7 +198,7 @@ The pud format consist of many sections, all sections start the same way:
         String s1, s2;
         int x,y;
         mapTiles = new Tile[mapDataTiles.length][mapDataTiles[0].length];
-        unitTiles = new Tile[mapDataTiles.length][mapDataTiles[0].length];
+        unitTiles = new ArrayList[mapDataTiles.length][mapDataTiles[0].length];
         //terrain
         for (x=0;x< mapDataTiles.length;x++)
         {
@@ -240,7 +241,9 @@ The pud format consist of many sections, all sections start the same way:
                 i2=(10+(c-'a'));
             else
                 i2=Integer.parseInt(ID.substring(1,2));
-            unitTiles[coorX][coorY]=unitTilesInfo[i1][i2];
+            if(unitTiles[coorX][coorY]==null)
+                unitTiles[coorX][coorY] = new ArrayList<Tile>();
+            unitTiles[coorX][coorY].add(unitTilesInfo[i1][i2]);
         }
 
     }
