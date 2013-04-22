@@ -204,7 +204,7 @@ The pud format consist of many sections, all sections start the same way:
         {
             for(y=0;y< mapDataTiles[0].length;y++)
             {
-
+                unitTiles[x][y] = new ArrayList<Tile>(); //for initializing all of fields from list
                 s1=String.format("%02X", mapDataTiles[x][y][1]);
                 s2=String.format("%02X", mapDataTiles[x][y][0]);
                 int i2,i3,i4;
@@ -241,8 +241,6 @@ The pud format consist of many sections, all sections start the same way:
                 i2=(10+(c-'a'));
             else
                 i2=Integer.parseInt(ID.substring(1,2));
-            if(unitTiles[coorX][coorY]==null)
-                unitTiles[coorX][coorY] = new ArrayList<Tile>();
             unitTiles[coorX][coorY].add(unitTilesInfo[i1][i2]);
         }
 
