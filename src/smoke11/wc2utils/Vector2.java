@@ -18,7 +18,7 @@ public class Vector2 {
     public Vector2(float x, float y)
     {this.x=(int)x;this.y=(int)y;}
     public Vector2(Vector2 vect)
-    {this.x=vect.x;this.y=vect.y;}
+    {this.x=vect.x;this.y=vect.y; }
 
     public void sub(Vector2 vec2)
     { this.x-=vec2.x; this.y-=vec2.y;}
