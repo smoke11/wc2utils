@@ -24,12 +24,16 @@ public class Vector2 {
     { this.x-=vec2.x; this.y-=vec2.y;}
     public void add(Vector2 vec2)
     { this.x+=vec2.x; this.y+=vec2.y;}
+    public void sub(int val)
+    { this.x-=val; this.y-=val;}
+    public void add(int val)
+    { this.x+=val; this.y+=val;}
     public double getLength()
     {  return Math.sqrt(this.x*this.x+this.y*this.y); }
     public void normalize()
     { this.x/=getLength(); this.y/=getLength();}
 
-    public boolean compareVector2f(Vector2 vec2) { return (this.x==vec2.x&&this.y==vec2.y);}
+    public boolean compareVector2(Vector2 vec2) { return (this.x==vec2.x&&this.y==vec2.y);}
 
     @Override
     public String toString(){return "("+x+","+y+")";}
