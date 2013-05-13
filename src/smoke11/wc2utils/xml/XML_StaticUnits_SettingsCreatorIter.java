@@ -23,8 +23,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
-public class XML_Units_SettingsCreatorIter {  //'thankfully' each of spritesheet is in diffrent size and order, so yeah, writing it all down :|
-    public static int main(String argv[]) {
+public class XML_StaticUnits_SettingsCreatorIter {  //'thankfully' each of spritesheet is in diffrent size and order, so yeah, writing it all down :|
+    public static int main(String argv[]) {     //all static units - for map editor / pudviewer
 
         try {
 
@@ -146,13 +146,13 @@ public class XML_Units_SettingsCreatorIter {  //'thankfully' each of spritesheet
             allOffsetY[0]=new int[]{10,8,0,9,11,7,9,7,0,0,5,6,13,11,12};
             //orc
             allOffsetX[1]=new int[]{22,14,7,12,21,23,12,12,12,9,15,6,7,3,5};
-            allOffsetY[1]=new int[]{8,2,4,8,9,8,8,8,4,1,7,6,6,2,5};
+            allOffsetY[1]=new int[]{8,0,4,8,9,8,8,8,4,1,7,6,6,2,5};
 
             sizes = new int[4][];
             sizesX[0]=new int[]{31,26,58,34,40,31,34,34,29,60,51,52,55,60,79};
             sizesY[0]=new int[]{40,23,59,64,47,51,64,38,72,72,83,82,58,64,74};
-            sizesX[1]=new int[]{38,29,47,50,34,29,50,34,45,53,61,88,72,66,80};
-            sizesY[1]=new int[]{43,32,58,46,46,59,46,38,65,69,80,87,66,72,79};
+            sizesX[1]=new int[]{38,30,47,50,34,29,50,34,45,53,61,88,72,66,80};
+            sizesY[1]=new int[]{43,35,58,46,46,59,46,38,65,69,80,87,66,72,79};
 
             for (int i1=0;i1<2;i1++)//for each style of tiles
             {
@@ -202,7 +202,7 @@ public class XML_Units_SettingsCreatorIter {  //'thankfully' each of spritesheet
 
                 transformer.transform(source, result);
 
-            DebugView.writeDebug(DebugView.DEBUGLVL_LESSINFO, XML_Units_SettingsCreatorIter.class.getSimpleName(), "File saved!");
+            DebugView.writeDebug(DebugView.DEBUGLVL_LESSINFO, XML_StaticUnits_SettingsCreatorIter.class.getSimpleName(), "File saved!");
             return 0;
 
         }
